@@ -1,12 +1,23 @@
 
+"""Funciones para ejecutar la búsqueda de tiendas y guardar resultados."""
+
 import json
 import os
+from dotenv import load_dotenv
+
 from memoria import cargar_memoria, guardar_memoria, ya_existe
 from geocoding import obtener_coordenadas_y_radio
 from places_search import buscar_lugares
 
+load_dotenv()
+
 TIENDAS_FILE = "tiendas_guardadas.json"
-API_KEY = "AIzaSyBOcCSXuwaRlQ3s0ttDcMOLBswCMjzsRYg"  
+API_KEY = os.getenv("GOOGLE_API_KEY")
+
+
+if not API_KEY:
+    raise RuntimeError("GOOGLE_API_KEY environment variable not set")
+
 
 def guardar_tiendas_formateadas(memoria):
     datos = {}
@@ -25,7 +36,10 @@ def guardar_tiendas_formateadas(memoria):
     with open(TIENDAS_FILE, "w", encoding="utf-8") as f:
         json.dump(datos, f, indent=2, ensure_ascii=False)
 
+
 def ejecutar_busqueda(estado, ciudades, keywords, optimizar, buscar_telefono):
+    """Execute store search for the given cities and keywords."""
+
     memoria = cargar_memoria()
     total_nuevas = 0
     errores = []
@@ -36,11 +50,14 @@ def ejecutar_busqueda(estado, ciudades, keywords, optimizar, buscar_telefono):
     for ciudad in ciudades:
         lat, lng, radio = obtener_coordenadas_y_radio(API_KEY, ciudad)
         if not lat or not lng:
-            errores.append(f"{ciudad}, {estado} - NO se encontraron coordenadas.")
+            msg = f"{ciudad}, {estado} - NO se encontraron coordenadas."
+            errores.append(msg)
             continue
 
         for kw in keywords[:]:
-            resultados = buscar_lugares(API_KEY, lat, lng, radio, kw, buscar_telefono)
+            resultados = buscar_lugares(
+                API_KEY, lat, lng, radio, kw, buscar_telefono
+            )
             nuevos = 0
             for lugar in resultados:
                 tienda = {
