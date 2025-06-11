@@ -3,14 +3,18 @@ INSTRUCCIONES DE USO LOCAL
 1. Instalar dependencias:
    pip install -r requirements.txt
 
-2. Ejecutar interfaz Streamlit:
+2. Copiar el archivo `.env.example` a `.env` y colocar tu clave de Google:
+   cp .env.example .env
+   # Edita `.env` y asigna tu API key
+
+3. Ejecutar interfaz Streamlit:
    streamlit run app_refactor.py
 
-3. Ejecutar API REST:
+4. Ejecutar API REST:
    uvicorn api_busqueda:app --reload
 
-4. Probar API en:
+5. Probar API en:
    http://127.0.0.1:8000/docs
 
-5. Ejecutar pruebas:
-   pytest test_app.py
+6. Ejecutar pruebas:
+   pytest
