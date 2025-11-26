@@ -1,25 +1,64 @@
 <!DOCTYPE html>
-<html lang='es'>
+<html lang="es">
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Página de prueba de Meme Coin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de prueba MemeCoin</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin: 40px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        p {
+            color: #4d4d4d;
+            line-height: 1.6;
+            margin: 20px 0;
         }
         .logo {
-            width: 20px;
-            height: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Bienvenido a la página de prueba de Meme Coin</h1>
-    <img class='logo' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAhGVYSWZNTQAqAAAACAAFARIAAwAAAAEAAQAAARoABQAAAAEAAABKARsABQAAAAEAAABSASgAAwAAAAEAAgAAh2kABAAAAAEAAABaAAAAAAAAAEgAAAABAAAASAAAAAEAA6ABAAMAAAABAAEAAKACAAQAAAABAAAEAKADAAQAAAABAAAEAAAAAAAg54ceAAAC50lEQVR4nKXUS08TURQA4Hvn1WlLp1NohUJ59SEFaVNETYhASpRoZKUbF8aNC9cu/AUuXLhy7w8wUSMrE1eKIhgfwRBMhXYo5REoLWM7M53Oq3OvC1xYxMToWd6cL+fec04uxBiDfw3inyUAgPr9yLbtgwOxXC4psqTW6xhAv98fjUQ8Hs+RTHjk2pIk53JZCiKade5WTQIZtF3fK5YUVUulUmdGR/+IRVHM59e7OjtfbRhPP+4tF6oOaJ8JOaZPOkNO/Vs2F4/Hpy9ePAarqprJZAYHYg9eFR9/2BsN0hvF+mZZ2f+uURDNnHLfHmtZ+5ZJT02NpFKH5GfDMMYbhY2eUHA2o7xek26eUzv4xRZH7sJALRmy4+12STKfLCmxaHhhYUHX9SZcV1Vd0728L9HuujdTReT9TPFzkHPcHicvpx6PDT28e6nW5qJ3ayRDkTlBaMKSLLtcLAYg2kZmSs+ze9zqzmSx0r0lQjftc9P+xa1nZ3uZzQOjtdW3s73dNCpN00iSMk2rWFVeLPctCWlZbtkvS3rjzXBoqdFwe+gTDGnoFmIcrKqqTZUtyzItq1BWGiba3B9Idr8Mta5gRBiWWpSAqO5wdABgEmGMEbJtuwnTDKMq8vaBSgEr2e5j6e308KO+wKfl/OX3mRsQOLq4qKRBN0OYpsFxXBP28XylUnVAa/ZL+XqKr8lXG0YMIh5iCEGtz3vWRSRWi9rJoOt7pRoOh5vezPM8QdFOo6xo9J2nec1o/1q45WXsUx0oFoh/zQ+KZbPbR5xw44III5FIU2WCIJKJhJDfuhLB15KcZVliTZPqZkk23uUQtsmgF04MeNeywlQ6TVHUMeu5srLydn4+Fu6VkHtuTV7draGGPdTBjPS4OjmYW8+fPj06MX7++N0GAAiCMDf3xm6YgTYfyzoxAKZpVqpSXTcnJyeTieFfk4/iw7FlszlBECRZRgh5PJ5wf//gYJxl2SOZx+C/j//6SX4AMS1/8KAum9QAAAAASUVORK5CYII=' alt='Logo de Meme Coin'>
-    <p>Esta es una página web de prueba hospedada en GitHub Pages para la Meme Coin. Aquí puedes ver el logo y algún texto de ejemplo.</p>
-    <p>Gracias por visitar nuestra página de prueba.</p>
+    <div class="container">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAhGVYSWZNTQAqAAAACAAFARIAAwAAAAEAAQAAARoABQAAAAEAAABKARsABQAAAAEAAABSASgAAwAAAAEAAgAAh2kABAAAAAEAAABaAAAAAAAAAEgAAAABAAAASAAAAAEAA6ABAAMAAAABAAEAAKACAAQAAAABAAAEAKADAAQAAAABAAAEAAAAAAAg54ceAAAC50lEQVR4nKXUS08TURQA4Hvn1WlLp1NohUJ59SEFaVNETYhASpRoZKUbF8aNC9cu/AUuXLhy7w8wUSMrE1eKIhgfwRBMhXYo5REoLWM7M53Oq3OvC1xYxMToWd6cL+fec04uxBiDfw3inyUAgPr9yLbtgwOxXC4psqTW6xhAv98fjUQ8Hs+RTHjk2pIk53JZCiKade5WTQIZtF3fK5YUVUulUmdGR/+IRVHM59e7OjtfbRhPP+4tF6oOaJ8JOaZPOkNO/Vs2F4/Hpy9ePAarqprJZAYHYg9eFR9/2BsN0hvF+mZZ2f+uURDNnHLfHmtZ+5ZJT02NpFKH5GfDMMYbhY2eUHA2o7xek26eUzv4xRZH7sJALRmy4+12STKfLCmxaHhhYUHX9SZcV1Vd0728L9HuujdTReT9TPFzkHPcHicvpx6PDT28e6nW5qJ3ayRDkTlBaMKSLLtcLAYg2kZmSs+ze9zqzmSx0r0lQjftc9P+xa1nZ3uZzQOjtdW3s73dNCpN00iSMk2rWFVeLPctCWlZbtkvS3rjzXBoqdFwe+gTDGnoFmIcrKqqTZUtyzItq1BWGiba3B9Idr8Mta5gRBiWWpSAqO5wdABgEmGMEbJtuwnTDKMq8vaBSgEr2e5j6e308KO+wKfl/OX3mRsQOLq4qKRBN0OYpsFxXBP28XylUnVAa/ZL+XqKr8lXG0YMIh5iCEGtz3vWRSRWi9rJoOt7pRoOh5vezPM8QdFOo6xo9J2nec1o/1q45WXsUx0oFoh/zQ+KZbPbR5xw44III5FIU2WCIJKJhJDfuhLB15KcZVliTZPqZkk23uUQtsmgF04MeNeywlQ6TVHUMeu5srLydn4+Fu6VkHtuTV7draGGPdTBjPS4OjmYW8+fPj06MX7++N0GAAiCMDf3xm6YgTYfyzoxAKZpVqpSXTcnJyeTieFfk4/iw7FlszlBECRZRgh5PJ5wf//gYJxl2SOZx+C/j//6SX4AMS1/8KAum9QAAAAASUVORK5CYII=" alt="MemeCoin logo" class="logo">
+        <h1>Bienvenido a la página de prueba de MemeCoin</h1>
+        <p>
+            Esta es una página de prueba elaborada para mostrar cómo se puede crear un sitio web simple utilizando
+            GitHub Pages. En esta página encontrarás nuestro logo destacado y un formato más elaborado para que
+            se vea profesional.
+        </p>
+        <p>
+            El propósito de esta página es demostrar que se puede diseñar y publicar una página web atractiva
+            utilizando herramientas gratuitas. Puedes modificar el contenido y estilo de esta página según tus
+            necesidades, y el logo se mantendrá proporcional gracias al estilo aplicado.
+        </p>
+        <p>
+            ¡Gracias por visitar nuestra página de prueba! Esperamos que te inspire a crear y personalizar tu propio
+            sitio web utilizando GitHub Pages.
+        </p>
+    </div>
 </body>
 </html>
